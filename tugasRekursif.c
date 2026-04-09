@@ -5,7 +5,25 @@ int m, n;
 int hantu[MAX];
 int angka[100];
 
-void quickSort(){
+void quickSort(int angka[], int size){
+    int temp, i, j;
+    do{
+        temp=0;
+            for(i=0; i<size-1; i++){
+                if(angka[i]>angka[i+1]){
+                    temp = angka[i];
+                    angka[i] = angka[i+1];
+                    angka[i+1] = temp;
+                    temp = 1;
+                }
+            }
+    } while(temp==1);
+
+    printf("\n");
+    printf("hasil soring quick asc: ");
+    for(int i=0; i<n; i++){
+        printf("%d ", angka[i]);
+    }
 
 }
 
@@ -19,11 +37,11 @@ void bubbleSort(int angka[], int size){
             }
         }
     }
-    printf("hasil sorting: \n");
+    printf("hasil sorting bubble desc: \n");
     for(int i = 0; i < n; i++){
         printf("%d ", angka[i]);
-
     }
+    
 }
 
 void input() {
@@ -38,6 +56,7 @@ void input() {
             printf("angka ke-%d: ", i+1); scanf("%d", &angka[i]);
         }
         bubbleSort(angka, n);
+        quickSort(angka, n);
     }
     else {
         printf("tidak valid, silakan coba kembali");
