@@ -1,15 +1,3 @@
-# Algorithm Playground
-
-Repository ini berisi kumpulan tugas dan eksperimen algoritma dasar menggunakan bahasa C.
-Fokus utama adalah mempelajari dan mengimplementasikan algoritma sorting seperti Bubble Sort dan Quick Sort.
-
-## 📘 Tujuan
-
-- Belajar dasar algoritma sorting di C.
-- Memahami logika Bubble Sort dan Quick Sort secara lengkap.
-- Melihat contoh implementasi C yang mudah diikuti.
-- Mengetahui perbedaan performa dan penggunaan kedua algoritma.
-
 ## 🧩 Struktur File
 
 - `program1.c` - implementasi Bubble Sort sederhana untuk angka.
@@ -186,24 +174,3 @@ gcc quick-sort.c -o quick-sort.exe
 gcc tugas-quick-bubble-hantu.c -o tugas-quick-bubble-hantu.exe
 .\tugas-quick-bubble-hantu.exe
 ```
-
-## ✅ Tips Belajar
-
-1. Jalankan satu file C terlebih dahulu untuk memahami input dan output.
-2. Tambahkan `printf()` sebelum dan sesudah sorting agar perubahan terlihat jelas.
-3. Coba ubah urutan data input untuk melihat perbedaan waktu eksekusi.
-4. Bandingkan logika Bubble Sort dan Quick Sort untuk memahami kapan setiap algoritma lebih cocok.
-5. Jika ingin ulang, modifikasi Quick Sort dengan memilih pivot `array[(low + high) / 2]` atau `array[high]`.
-
-## 🎯 Rekomendasi Latihan
-
-- Tambahkan input pengguna di contoh Quick Sort.
-- Ubah `tugas-quick-bubble-hantu.c` agar dapat memilih ascending atau descending.
-- Buat fungsi `print_array()` untuk mencetak array agar kode lebih rapi.
-- Implementasikan versi Bubble Sort yang berhenti lebih awal saat sudah terurut.
-
-## 📌 Kesimpulan
-
-README ini membantu kamu mempelajari teori sorting dan melihat implementasi C langsung.
-Kamu bisa menggunakan contoh Bubble Sort dan Quick Sort sebagai dasar untuk eksperimen lebih lanjut.
-
