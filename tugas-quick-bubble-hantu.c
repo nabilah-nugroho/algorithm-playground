@@ -1,33 +1,29 @@
 #include <stdio.h>
 
-#define MAX 10
+#define serem 10
 int m, n;
-int hantu[MAX];
+int hantu[serem];
 int angka[100];
 
 void quickSort(int angka[], int size){
     int temp, i, j;
-    do{
-        temp=0;
-            for(i=0; i<size-1; i++){
-                if(angka[i]>angka[i+1]){
-                    temp = angka[i];
-                    angka[i] = angka[i+1];
-                    angka[i+1] = temp;
-                    temp = 1;
-                }
-            }
-    } while(temp==1);
+ //???????masi salah?????????
 
     printf("\n");
-    printf("hasil soring quick asc: ");
+    printf("hasil soring quick asc: \n");
     for(int i=0; i<n; i++){
         printf("%d ", angka[i]);
     }
-
 }
 
-void bubbleSort(int angka[], int size){
+int hantuIni(int target[serem]){
+    for(int i=0; i<m; i++){
+        if(target[i]==hantu[i])return 1;
+    }
+    return 0;
+}
+
+int bubbleSort(int angka[], int size, int hantu[]){
     int temp, i, j;
     for(i=0; i<size-1; i++){
         for(j=0; j<size-1-i; j++){
@@ -39,9 +35,13 @@ void bubbleSort(int angka[], int size){
     }
     printf("hasil sorting bubble desc: \n");
     for(int i = 0; i < n; i++){
-        printf("%d ", angka[i]);
+        if(i == hantuIni(hantu[i])){
+            printf("  ");
+        }
+        else{
+            printf("%d ", angka[i]);
+        }
     }
-    
 }
 
 void input() {
@@ -55,9 +55,8 @@ void input() {
         for(int i = 0; i < n; i++){
             printf("angka ke-%d: ", i+1); scanf("%d", &angka[i]);
         }
-        bubbleSort(angka, n);
-        quickSort(angka, n);
-    }
+        bubbleSort(angka, n, hantu);
+        }
     else {
         printf("tidak valid, silakan coba kembali");
     }
