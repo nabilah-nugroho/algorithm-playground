@@ -5,20 +5,9 @@ int m, n;
 int hantu[serem];
 int angka[100];
 
-void quickSort(int angka[], int size){
-    int temp, i, j;
- //???????masi salah?????????
-
-    printf("\n");
-    printf("hasil soring quick asc: \n");
-    for(int i=0; i<n; i++){
-        printf("%d ", angka[i]);
-    }
-}
-
-int hantuIni(int target[serem]){
+int hantuIni(int x){
     for(int i=0; i<m; i++){
-        if(target[i]==hantu[i])return 1;
+        if(x==hantu[i])return 1;
     }
     return 0;
 }
@@ -35,7 +24,7 @@ int bubbleSort(int angka[], int size, int hantu[]){
     }
     printf("hasil sorting bubble desc: \n");
     for(int i = 0; i < n; i++){
-        if(i == hantuIni(hantu[i])){
+        if(hantuIni(hantu[i])){
             printf("  ");
         }
         else{
