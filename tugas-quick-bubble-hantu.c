@@ -11,7 +11,7 @@ void tuker(int *a, int *b){
     *b = temp;
 }
 
-int posisi(int angka[], int low, int high) {
+int tungs(int angka[], int low, int high) {
     int pivot = angka[high]; 
     int i = (low - 1); 
 
@@ -26,10 +26,9 @@ int posisi(int angka[], int low, int high) {
     return (i + 1);
 }
 
-// Fungsi rekursif Quick Sort
 void quickSort(int angka[], int low, int high) {
     if (low < high) {
-        int pi = posisi(angka, low, high);
+        int pi = tungs(angka, low, high);
 
         quickSort(angka, low, pi - 1);  // bagian kiri pivot
         quickSort(angka, pi + 1, high); // bagian kanan pivot
