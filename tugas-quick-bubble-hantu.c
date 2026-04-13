@@ -59,7 +59,7 @@ void bubbleSort(int angka[], int size, int hantu[]){
             }
         }
     }
-    printf("hasil sorting bubble desc: \n");
+    printf("hasil sorting bubble (desc+hantu): \n");
     for(int i = 0; i < n; i++){
         if(hantuIni(angka[i])){
             printf("  ");
@@ -71,8 +71,9 @@ void bubbleSort(int angka[], int size, int hantu[]){
 }
 
 void input() {
-    printf("masukkan angka m dan n: ");
-    scanf("%d %d", &m, &n);
+    printf("masukkan total angka hantu yang ada (m): "); scanf("%d", &m);
+    printf("masukkan total angka keseluruhan (n): "); scanf("%d", &n);
+    printf("\n");
 
     if (m < 10 && m > 0 && n <= 100 && n > 0 && m < n){
         for(int i = 0; i < m; i++){
