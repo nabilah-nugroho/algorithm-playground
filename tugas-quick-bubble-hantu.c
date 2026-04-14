@@ -15,7 +15,7 @@
 //        dan yang lebih besar ke kanan (fungsi tungs sebagai fungsi partitioning)
 //    3. dengan rekursif, fungsi quickSort memanggil dirinya sendiri untuk bagian kiri dan kanan pivot 
 //       secara terus-menerus sampai sub-array hanya berisi satu elemen (yang berarti sudah terurut).
-//    4. Kondisi if (low < high) adalah base case. kalau indeks bawah sudah melampaui atau sama dengan indeks atas, rekursi berhenti.
+//    4. kalau indeks bawah sudah melampaui atau sama dengan indeks atas (low >= high), rekursi berhenti.
 
 //3. mengapa pencetakan quicksort dengan rekursif dipisah dengan fungsi quicksortnya
 //   sedangkan fungsi pencetakan dan fungsi bubblesort dengan for loop digabung
@@ -58,7 +58,7 @@ int m, n; // m = jumlah angka hantu, n = jumlah total angka
 int hantu[serem]; //array untuk menyimpan angka hantu
 int angka[100]; //array untuk menyimpan seluruh data angka
 
-//fungsi prototype untuk hantuIni (dideklarasikan sebelum digunakan)
+//untuk mendeteksi angka hantu
 int hantuIni(int x);
 
 //fungsi untuk menukar dua elemen dengan menampung
@@ -89,7 +89,7 @@ int tungs(int angka[], int low, int high) {
 // fungsi quicksort saya coba menggunakan metode rekursif
 // membagi array menjadi sub-array kiri dan kanan pivot
 void quickSort(int angka[], int low, int high) {
-    if (low < high) { //base condition: jika low >= high maka tidak perlu sorting lagi
+    if (low < high) { //jika low sudah >= high maka tidak perlu sorting lagi
         int pi = tungs(angka, low, high);
 
         quickSort(angka, low, pi - 1);  // bagian kiri pivot
